@@ -54,7 +54,7 @@ randomize = array => {
           this.setState({
           marked : 43, 
           score : 0, 
-          resultMessage: "You guessed wrong that time."})
+          resultMessage: "You guessed wrong."})
     //     //Shuffle the cards and re-render
         this.randomize(this.state.giphys);  
 
@@ -66,7 +66,8 @@ randomize = array => {
           this.setState({
             topScore: this.state.score + 1
           })
-        }        
+        }       
+        //You guessed right! Game on, my friend. 
         this.setState({
     //     //store the id of the character you chose in the marked array
           marked: this.state.marked * id,
@@ -75,8 +76,6 @@ randomize = array => {
     //       //display positive message
           resultMessage: "You got it right!"
         })
-
-    //    
 
     //     //Shuffle the cards and re-render
         this.randomize(this.state.giphys);  
