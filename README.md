@@ -1,6 +1,8 @@
 # Member Giphys
 _Your only foe...is your own mind!_
 
+[**PLAY NOW**](http://fermenting.github.io/clicky-memory-game)
+
 ![Well Hello There!](https://media.giphy.com/media/xT9IgB5Q6QYqarxeIU/giphy.gif)
 
 ## Concept
