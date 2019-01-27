@@ -1,7 +1,8 @@
 .title {
   width: 100%;
   text-align: center;
-  font-size: 3rem;
-  color: purple;
+  font-size: 8rem;
+  color: rgb(128, 12, 60);
   margin-bottom: 50px;
+  font-family: cursive
 }

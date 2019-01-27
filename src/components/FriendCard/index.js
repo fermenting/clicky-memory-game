@@ -7,9 +7,9 @@ function FriendCard(props) {
       <div className="img-container">
         <img alt={props.name} src={props.image} />
       </div>
-      <span onClick={() => props.markIt(props.id)} className="remove">
-        o
-      </span>
+      <div onClick={() => props.markIt(props.id)} className="remove">
+      ⬚
+      </div>
     </div>
   );
 }

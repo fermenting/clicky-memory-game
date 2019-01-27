@@ -14,7 +14,7 @@ class App extends Component {
   state = {
     friends,
     markedArray : [1, 2, 3],
-    resultMessage: "click on any character to begin",
+    resultMessage: "Click on any character to start",
     score : 0,
     topScore: 0
   };
