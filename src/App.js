@@ -2,22 +2,37 @@ import React, { Component } from "react";
 import FriendCard from "./components/FriendCard";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
-import friends from "./friends.json";
+import giphys from "./giphys.json";
 import Score from "./components/Score";
+import Message from "./components/Message";
 
 class App extends Component {
-  // Setting this.state.friends to the friends json array
-  //same as friends : friends
+  // Setting this.state.giphys to the giphys json array
+  //same as giphys : giphys
   //when defining object properties with ES6, 
   //if the object's key and value have the same name, 
   //we can omit the colon — this is just an optional shorthand syntax.
   state = {
-    friends,
-    markedArray : [1, 2, 3],
+    giphys,
+    markedArray : [],
     resultMessage: "Click on any character to start",
     score : 0,
     topScore: 0
   };
+
+//once everything is all locked & loaded, we gotta roll the dice!
+componentDidMount(){
+  this.setState({giphys: this.randomize(this.state.giphys)});
+}
+
+randomize = array => {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+};
+
 
   markIt = id => {
 
@@ -59,10 +74,10 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
-        <Title>Memory Game!</Title>
-        <Score>{this.state.resultMessage}</Score>
-        <Score>Memorized: {this.state.score}  ---  Best Ever: {this.state.topScore}</Score>
-        {this.state.friends.map(friend => (
+        <Title>'Member Giphys!</Title>
+        <Message>{this.state.resultMessage}</Message>
+        <Score>'Memberized: {this.state.score}  ▩  Bestest Ever: {this.state.topScore}</Score>
+        {this.state.giphys.map(friend => (
           <FriendCard
             markIt={this.markIt}
             id={friend.id}

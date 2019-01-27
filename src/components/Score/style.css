@@ -2,6 +2,7 @@
   width: 100%;
   text-align: center;
   font-size: 2rem;
-  color: blue;
+  color: rgb(14, 87, 0);
   margin-bottom: 50px;
+  font-family: monospace
 }

@@ -33,7 +33,7 @@
   margin-top: 18px;
 }
 
-.card > .remove {
+.card > .guess {
   color: #ffffff;
   font-size: 320px;
   position: absolute;
@@ -42,6 +42,6 @@
   cursor: pointer;
 }
 
-.card > .remove:hover {
+.card > .guess:hover {
   color: #bb18d1;
 }
