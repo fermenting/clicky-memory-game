@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/membergiphys/precache-manifest.6a9d6c2dbc70889ab884d794f1147bb6.js"
+  "/clicky-memory-game/precache-manifest.f9046fb8cbf29eccb25a4f0e1fde7427.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/membergiphys/index.html", {
+workbox.routing.registerNavigationRoute("/clicky-memory-game/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
