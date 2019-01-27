@@ -13,16 +13,44 @@ class App extends Component {
   //we can omit the colon — this is just an optional shorthand syntax.
   state = {
     friends,
-    markedIdArray : []
+    markedArray : [1, 2, 3],
+    score : 0,
+    // topScore: 0
   };
 
-  memoryMark = id => {
-    //below is the previously working code from the example in class
+  markIt = id => {
+
+    //On each click of a card...
+      //compare the id of the clicked card to the values in markedArray. 
+      for (var i = 0; i<this.markedArray.length; i++){
+      
+      //you chose a card that you chose already
+        if (this.markedArray[i] === id) {
+        this.setState({markedArray : [], score : 0 })
+        console.log(this.state)        
+
+      } else {
+        
+        this.setState({
+          markedArray: this.markedArray.push(id), 
+          score: this.state.score + 1})
+        console.log(this.state)        
+      }
+    }
+  };
+
+ 
+  
+  
+      //If not in array:
+      
+      //
+
+
 
     //What we need here is a way to track clicks and to re-render the cards in a random order. Here are the steps
       //create & display a score as well as a top score
-      //in the friends.json, added a "marked" key, and set to 'false' for each object
-      //on click of 'x' (for now), object key should be updated to 'true' 
+
         //Increment score by 1
         //if current score is greater than top score, set top score equal to current score
       //if object clicked was already true, game is over, and restarts.
@@ -38,15 +66,15 @@ class App extends Component {
     //We include only friends with an id property not equal to the id being received into this method. 
     // const friends = this.state.friends.filter(friend => friend.id !== id);
 
-    let notMarked = this.state.friends
+    // let notMarked = this.state.friends
 
-    notMarked = this.state.friends.filter(friend => friend.id !== id);
+    // notMarked = this.state.friends.filter(friend => friend.id !== id);
     
-    console.log(notMarked)
-    // Set this.state.friends equal to the new friends array
-    //when we update our component's state by removing one of the friend objects, our component re-renders itself.
+    // console.log(notMarked)
+    // // Set this.state.friends equal to the new friends array
+    // //when we update our component's state by removing one of the friend objects, our component re-renders itself.
     // this.setState({ friends });
-  };
+  
 
   // Map over this.state.friends and render a FriendCard component for each friend object
   //whenever we map over a list of data and return JSX, 
@@ -59,10 +87,10 @@ class App extends Component {
     return (
       <Wrapper>
         <Title>Memory Game!</Title>
-        <Score>Memorized: 0  ---  Best Ever: 12</Score>
+        <Score>Memorized: {this.state.score}  ---  Best Ever: 12</Score>
         {this.state.friends.map(friend => (
           <FriendCard
-            memoryMark={this.memoryMark}
+            markIt={this.markIt}
             id={friend.id}
             key={friend.id}
             image={friend.image}
