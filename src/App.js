@@ -14,6 +14,7 @@ class App extends Component {
   //we can omit the colon — this is just an optional shorthand syntax.
   state = {
     giphys,
+    //my logic is based on prime numbers, so we start with marked being equal to a unique prime number.
     marked : 43,
     resultMessage: "Click on any character to start",
     score : 0,
@@ -25,6 +26,7 @@ componentDidMount(){
   this.setState({giphys: this.randomize(this.state.giphys)});
 }
 
+//randomize an array to shuffle the order of the cards.
 randomize = array => {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -33,17 +35,18 @@ randomize = array => {
   return array;
 };
 
-
+    //On each click of a card...
   markIt = id => {
 
-    //On each click of a card...
-      //compare the id of the clicked card to the values in marked. 
-      
-      console.log(id)
+      //Testing: logs the id of the clicked card.
+      //All card ids are unique prime numbers.
+      // console.log(id)
 
+      //Testing: multiply the marked state by the id. 
       // this.setState({marked: this.state.marked * id})
-      console.log(this.state.marked % id)
-      console.log(this.state)
+
+      //Testing: divide the marked state by the id. if the remainder is 0, it's a number/id that has already been used.
+      // console.log(this.state.marked % id)
 
     //   // you chose a card that you chose already - GAME OVER
         if (this.state.marked % id === 0) {
@@ -57,7 +60,13 @@ randomize = array => {
 
     //     //otherwise, you must have chosen a new character
       } else {
-        
+
+         //increment top score if necessary
+         if (this.state.score === this.state.topScore) {
+          this.setState({
+            topScore: this.state.score + 1
+          })
+        }        
         this.setState({
     //     //store the id of the character you chose in the marked array
           marked: this.state.marked * id,
@@ -67,12 +76,7 @@ randomize = array => {
           resultMessage: "You got it right!"
         })
 
-    //     //increment top score if necessary
-          if (this.state.score > this.state.topScore) {
-          this.setState({
-            topScore: this.state.score
-          })
-        }
+    //    
 
     //     //Shuffle the cards and re-render
         this.randomize(this.state.giphys);  
