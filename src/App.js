@@ -89,6 +89,7 @@ randomize = array => {
       <Wrapper>
         <Title>'Member Giphys!</Title>
         <Message>{this.state.resultMessage}</Message>
+        <Message>Don't repeat your clicks!</Message>
         <Score>'Memberized: {this.state.score}  ▩  Bestest Ever: {this.state.topScore}</Score>
         {this.state.giphys.map(friend => (
           <FriendCard
