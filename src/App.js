@@ -14,7 +14,7 @@ class App extends Component {
   //we can omit the colon — this is just an optional shorthand syntax.
   state = {
     giphys,
-    markedArray : [],
+    marked : 43,
     resultMessage: "Click on any character to start",
     score : 0,
     topScore: 0
@@ -37,36 +37,46 @@ randomize = array => {
   markIt = id => {
 
     //On each click of a card...
-      //compare the id of the clicked card to the values in markedArray. 
-      for (var i = 0; i<this.markedArray.length; i++){
+      //compare the id of the clicked card to the values in marked. 
       
-      //you chose a card that you chose already - GAME OVER
-        if (this.markedArray[i] === id) {
-          //reset the marked array to an empty array, set score to 0
-        this.setState({markedArray : [], score : 0, resultMessage: "You guessed wrong that time."})
-        //Shuffle the cards and re-render
+      console.log(id)
 
-        //otherwise, you must have chosen a new character
+      // this.setState({marked: this.state.marked * id})
+      console.log(this.state.marked % id)
+      console.log(this.state)
+
+    //   // you chose a card that you chose already - GAME OVER
+        if (this.state.marked % id === 0) {
+    //       //reset the marked array to an empty array, set score to 0
+          this.setState({
+          marked : 43, 
+          score : 0, 
+          resultMessage: "You guessed wrong that time."})
+    //     //Shuffle the cards and re-render
+        this.randomize(this.state.giphys);  
+
+    //     //otherwise, you must have chosen a new character
       } else {
         
         this.setState({
-        //store the id of the character you chose in the marked array
-          markedArray: this.markedArray.push(id), 
-          //increment your score
+    //     //store the id of the character you chose in the marked array
+          marked: this.state.marked * id,
+    //       //increment your score
           score: this.state.score + 1,
-          //display positive message
+    //       //display positive message
           resultMessage: "You got it right!"
-        
         })
-        //increment top score if necessary
+
+    //     //increment top score if necessary
           if (this.state.score > this.state.topScore) {
           this.setState({
             topScore: this.state.score
           })
         }
 
-        //Shuffle the cards and re-render
-      }
+    //     //Shuffle the cards and re-render
+        this.randomize(this.state.giphys);  
+
     }
   };
 
