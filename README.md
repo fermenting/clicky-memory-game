@@ -70,9 +70,15 @@ App.js
         }
 ~~~
 
+To test that this approach works, I found the product of all numbers used. For each number used, I divided the product of all numbers by one of the prime numbers used, and then divided it again by the same prime number. If the remainder is 0 for any result, than that would indicate an erroneous game over condition. 
+
+if (product/primeNum % primeNum !== 0) {no false positives}
+
+
+
 ## Styling
 
-I was playing memory games like this in the early 90's, so I tried to style my 'Member Giphys in that vain - Strange pastel colors, images that look like they could be on the bottom of a skate board, and southpark references. That's what we were in to at the time!
+I was playing memory games like this in the early 90's, so I tried to style my 'Member Giphys in that vain - Strange pastel colors, images that look like they could be on the bottom of a skate board, and southpark references. That's what we dug at the time!
 
 ## Thanks
 
