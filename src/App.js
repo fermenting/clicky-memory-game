@@ -16,7 +16,7 @@ class App extends Component {
     giphys,
     //my logic is based on prime numbers, so we start with marked being equal to a unique prime number.
     marked : 43,
-    resultMessage: "Click on any character to start",
+    resultMessage: "Pick any character to start...",
     score : 0,
     topScore: 0
   };
@@ -89,7 +89,7 @@ randomize = array => {
       <Wrapper>
         <Title>'Member Giphys!</Title>
         <Message>{this.state.resultMessage}</Message>
-        <Message>Don't repeat your clicks!</Message>
+        <Message>Just don't pick the same character twice.</Message>
         <Score>'Memberized: {this.state.score}  ▩  Bestest Ever: {this.state.topScore}</Score>
         {this.state.giphys.map(friend => (
           <FriendCard
