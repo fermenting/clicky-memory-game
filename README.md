@@ -48,7 +48,7 @@ App.js
 
 state = {
   ...
-    marked : 43,
+    marked : 2,
   ...
 ~~~
 
