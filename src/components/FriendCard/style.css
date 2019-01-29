@@ -1,10 +1,10 @@
 .card {
   background: #fff;
   border-radius: 2px;
-  height: 325px;
+  height: 150px;
   margin: 1rem;
   position: relative;
-  width: 325px;
+  width: 150px;
   box-shadow: 0 3px 6px #999, 0 3px 6px #999;
   text-align: left;
 }
@@ -35,9 +35,9 @@
 
 .card > .guess {
   color: #ffffff;
-  font-size: 320px;
+  font-size: 150px;
   position: absolute;
-  top: -75px;
+  top: -35px;
   /* right: 0; */
   cursor: pointer;
 }
