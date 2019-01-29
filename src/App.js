@@ -52,7 +52,7 @@ randomize = array => {
         if (this.state.marked % id === 0) {
     //       //reset the marked array to an empty array, set score to 0
           this.setState({
-          marked : 43, 
+          marked : 2, 
           score : 0, 
           resultMessage: "You guessed wrong."})
     //     //Shuffle the cards and re-render
