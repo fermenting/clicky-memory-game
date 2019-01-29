@@ -15,7 +15,7 @@ class App extends Component {
   state = {
     giphys,
     //my logic is based on prime numbers, so we start with marked being equal to a unique prime number.
-    marked : 43,
+    marked : 2,
     resultMessage: "Pick any character to start...",
     score : 0,
     topScore: 0
