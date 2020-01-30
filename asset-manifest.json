@@ -1,13 +1,22 @@
 {
-  "main.css": "/clicky-memory-game/static/css/main.c3056a82.chunk.css",
-  "main.js": "/clicky-memory-game/static/js/main.70d5061f.chunk.js",
-  "main.js.map": "/clicky-memory-game/static/js/main.70d5061f.chunk.js.map",
-  "static/js/1.fa92c112.chunk.js": "/clicky-memory-game/static/js/1.fa92c112.chunk.js",
-  "static/js/1.fa92c112.chunk.js.map": "/clicky-memory-game/static/js/1.fa92c112.chunk.js.map",
-  "runtime~main.js": "/clicky-memory-game/static/js/runtime~main.24c1d7e6.js",
-  "runtime~main.js.map": "/clicky-memory-game/static/js/runtime~main.24c1d7e6.js.map",
-  "static/css/main.c3056a82.chunk.css.map": "/clicky-memory-game/static/css/main.c3056a82.chunk.css.map",
-  "index.html": "/clicky-memory-game/index.html",
-  "precache-manifest.d7cb4df771498fe30cc656c4e1647b4e.js": "/clicky-memory-game/precache-manifest.d7cb4df771498fe30cc656c4e1647b4e.js",
-  "service-worker.js": "/clicky-memory-game/service-worker.js"
+  "files": {
+    "main.css": "/clicky-memory-game/static/css/main.50d0c8e7.chunk.css",
+    "main.js": "/clicky-memory-game/static/js/main.1aa4d9f8.chunk.js",
+    "main.js.map": "/clicky-memory-game/static/js/main.1aa4d9f8.chunk.js.map",
+    "runtime-main.js": "/clicky-memory-game/static/js/runtime-main.a9aa49fe.js",
+    "runtime-main.js.map": "/clicky-memory-game/static/js/runtime-main.a9aa49fe.js.map",
+    "static/js/2.c84f355e.chunk.js": "/clicky-memory-game/static/js/2.c84f355e.chunk.js",
+    "static/js/2.c84f355e.chunk.js.map": "/clicky-memory-game/static/js/2.c84f355e.chunk.js.map",
+    "index.html": "/clicky-memory-game/index.html",
+    "precache-manifest.f53301d8ad6570d62846230702fc8fe8.js": "/clicky-memory-game/precache-manifest.f53301d8ad6570d62846230702fc8fe8.js",
+    "service-worker.js": "/clicky-memory-game/service-worker.js",
+    "static/css/main.50d0c8e7.chunk.css.map": "/clicky-memory-game/static/css/main.50d0c8e7.chunk.css.map",
+    "static/js/2.c84f355e.chunk.js.LICENSE": "/clicky-memory-game/static/js/2.c84f355e.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a9aa49fe.js",
+    "static/js/2.c84f355e.chunk.js",
+    "static/css/main.50d0c8e7.chunk.css",
+    "static/js/main.1aa4d9f8.chunk.js"
+  ]
 }
